@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Payment Form Example</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <!-- body -->
+  <body class="p-4">
+    <div class="container">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">Payment form example</h5>
+
+          <!-- Alert -->
+          <div class="alert alert-danger" role="alert">
+            Some fields are missing
+          </div>
+
+          <!-- Form -->
+          <form>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label for="cardNumber" class="form-label">Card #</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="cardNumber"
+                  placeholder="XXXXXXXXXXXXXXX"
+                />
+              </div>
+              <div class="col-md-3">
+                <label for="cvc" class="form-label">CVC #</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="cvc"
+                  placeholder="0000"
+                />
+              </div>
+              <div class="col-md-3">
+                <label for="amount" class="form-label">Amount</label>
+                <div class="input-group">
+                  <span class="input-group-text">$</span>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="amount"
+                    placeholder="Amount"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <!-- Names -->
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label for="firstName" class="form-label">First Name</label>
+                <input type="text" class="form-control" id="firstName" />
+              </div>
+              <div class="col-md-6">
+                <label for="lastName" class="form-label">Last Name</label>
+                <input type="text" class="form-control" id="lastName" />
+              </div>
+            </div>
+
+            <!-- Address -->
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label for="city" class="form-label">City</label>
+                <input type="text" class="form-control" id="city" />
+              </div>
+              <div class="col-md-3">
+                <label for="state" class="form-label">State</label>
+                <select class="form-select" id="state">
+                  <option selected>Pick a state</option>
+                  <option>California</option>
+                  <option>New York</option>
+                  <option>Florida</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <label for="postalCode" class="form-label">Postal Code</label>
+                <input type="text" class="form-control" id="postalCode" />
+              </div>
+            </div>
+
+            <!-- Card Types -->
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <label class="form-label d-block">We accept:</label>
+                <div class="d-inline-flex gap-3 bg-dark p-2 rounded">
+                  <!-- Visa -->
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="cardType"
+                      id="visa"
+                    />
+                    <label class="form-check-label" for="visa">
+                      <img
+                        src="https://img.icons8.com/color/32/000000/visa.png"
+                        alt="Visa"
+                        class="img-fluid"
+                      />
+                    </label>
+                  </div>
+
+                  <!-- MasterCard -->
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="cardType"
+                      id="mastercard"
+                    />
+                    <label class="form-check-label" for="mastercard">
+                      <img
+                        src="https://img.icons8.com/color/32/000000/mastercard.png"
+                        alt="MasterCard"
+                        class="img-fluid"
+                      />
+                    </label>
+                  </div>
+
+                  <!-- Amex -->
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="cardType"
+                      id="amex"
+                    />
+                    <label class="form-check-label" for="amex">
+                      <img
+                        src="https://img.icons8.com/color/32/000000/amex.png"
+                        alt="Amex"
+                        class="img-fluid"
+                      />
+                    </label>
+                  </div>
+
+                  <!-- Discover -->
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="cardType"
+                      id="discover"
+                    />
+                    <label class="form-check-label" for="discover">
+                      <img
+                        src="https://img.icons8.com/color/32/000000/discover.png"
+                        alt="Discover"
+                        class="img-fluid"
+                      />
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Message -->
+              <div class="col-md-6">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" rows="4"></textarea>
+                <p class="form-text">Add any notes here.</p>
+              </div>
+            </div>
+
+            <!-- buttons -->
+            <div class="d-flex justify-content-end">
+              <button type="button" class="btn btn-secondary me-2">
+                Cancel
+              </button>
+              <button type="submit" class="btn btn-primary">Send</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
